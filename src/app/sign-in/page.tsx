@@ -52,7 +52,7 @@ export default function SignInPage() {
         <footer >
           <p className="text-sm text-center">
             <span className="text-gray-500">
-              Don't have an account?
+              Don&apos;t have an account?
             </span> {" "}
             <a href="/register" className="text-blue-600">
               Register here

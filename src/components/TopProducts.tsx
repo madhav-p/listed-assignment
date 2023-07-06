@@ -22,7 +22,7 @@ export default function TopProducts({ data }: ActivitesProps) {
           <select name="" id="" value={selection} onChange={(e) => setSelection(+e.target.value)}>
             {data.map((m, i) => (
 
-              <option value={i}>{
+              <option value={i} key={i}>{
                 monthFormater.formatRange(new Date(Date.UTC(2023, m.month, 0, 0, 0, 0)), new Date(Date.UTC(2023, m.month + 1, 0, 0, 0, 0)))
               }</option>
             ))}

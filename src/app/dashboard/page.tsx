@@ -41,7 +41,7 @@ const TodaySchedule: React.FC<TodayScheduleProps> = ({ data }) => {
   const COLORS = ["#9BDD7C", "#6972C3"]
   return (<article className="p-4 bg-white rounded-xl">
     <header className="flex justify-between">
-      <h2 className="text-xl font-bold font-montserrat">Today's Schedule</h2>
+      <h2 className="text-xl font-bold font-montserrat">Today&apos;s Schedule</h2>
       <section className="inline-flex gap-2 items-center">
         <small>See All</small>
         <Image alt={"Chevron icon right"}
@@ -53,7 +53,7 @@ const TodaySchedule: React.FC<TodayScheduleProps> = ({ data }) => {
       {
         data.filter((v, i) => i < 2).map((s, i) => (
 
-          <article style={{ borderColor: COLORS[i % COLORS.length] }} className={`border-l-4 px-2 py-1`}>
+          <article key={i} style={{ borderColor: COLORS[i % COLORS.length] }} className={`border-l-4 px-2 py-1`}>
             <h3 className="text-lg font-lato font-bold">{s.title}</h3>
             <p className="text-sm">{s.from}-{s.to}</p>
             <p className="text-sm">at {s.location}</p>
