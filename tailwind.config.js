@@ -6,6 +6,11 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    fontFamily:{
+      montserrat: ['var(--font-family-montserrat)'],
+      lato:['var(--font-family-lato)'],
+      opensans:['var(--font-family-opensans)']
+    },
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
