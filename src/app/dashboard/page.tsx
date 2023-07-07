@@ -1,4 +1,4 @@
-import DashboardHeader from "@/components/DasboardHeader";
+import DashboardHeader from "@/components/DashboardHeader";
 import DashboardNav from "@/components/DashboardNav";
 import SummaryCard from "@/components/SummaryCard";
 import Image from "next/image";
