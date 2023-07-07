@@ -1,6 +1,12 @@
-import Image from "next/image"
+import Image from "next/image";
+
+import SignInForm from "./SignInForm";
+import { signIn } from "next-auth/react";
+import GoogleSingIn from "./GoogleSignIn";
+import AppleSingIn from "./AppleSignIn";
 
 export default function SignInPage() {
+
   return (
     <article className={"w-full min-h-screen grid  md:grid-cols-[2fr_3fr] grid-cols-1  font-lato"}  >
       <aside className="bg-black grid place-content-center p-8">
@@ -15,39 +21,10 @@ export default function SignInPage() {
         </header>
         <main className="flex flex-col gap-4" >
           <section className="flex w-full justify-evenly gap-2 flex-wrap">
-            <button className={" text-sm flex gap-2 items-center rounded-full px-4 py-2 bg-white font-montserrat"}>
-              <Image
-                src="/google.svg"
-                alt="Google Logo"
-                width={14}
-                height={14}
-                priority
-              />
-              Sign in with Google</button>
-            <button className={" text-sm flex gap-2 items-center rounded-full px-4 py-2 bg-white font-montserrat"}>
-              <Image
-                src="/apple.svg"
-                alt="Apple Logo"
-                width={14}
-                height={14}
-                priority
-              />
-              Sign in with Apple</button>
+            <GoogleSingIn></GoogleSingIn>
+            <AppleSingIn></AppleSingIn>
           </section>
-          <form action="" className="bg-white p-8 rounded-xl grid gap-3">
-            <label htmlFor="">
-              <p className="font-normal mb-1">Email address</p>
-              <input className="w-full bg-gray-200 px-3 py-2 rounded-lg placeholder-slate-600" type="text" name="email" id="email" placeholder="johndoe@gmail.com" />
-            </label>
-            <label htmlFor="">
-              <p className="font-normal mb-1">Password</p>
-              <input className="w-full bg-gray-200 px-3 py-2 rounded-lg placeholder-slate-600" type="password" name="password" id="password" placeholder="password" />
-            </label>
-            <a href="/forgot-password" className="text-blue-500 text-sm"> Forgot Password? </a>
-            <button className={"bg-black text-white rounded-lg p-2 font-montserrat"}>
-              Sign In
-            </button>
-          </form>
+          <SignInForm></SignInForm>
         </main>
         <footer >
           <p className="text-sm text-center">

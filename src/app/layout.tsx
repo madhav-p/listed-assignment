@@ -1,5 +1,7 @@
+import { SessionProvider } from 'next-auth/react'
 import './globals.css'
 import { montserrat, lato, opensans } from "@/fonts"
+import SessionWraper from './Session'
 
 export const metadata = {
   title: 'Board App',
@@ -14,7 +16,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${montserrat.variable} ${opensans.variable} ${lato.variable}`}>
       <body>
-        {children}
+        <SessionWraper >
+          {children}
+        </SessionWraper>
       </body>
     </html>
   )

@@ -5,7 +5,7 @@ export default function Home() {
     <article className='grid min-h-screen grid-rows-[max-content_1fr_max-content]'>
       <header className='flex bg-black  text-white p-4'>
         <h3 className='max-w-lg mx-auto text-2xl font-semibold '>
-          Board App
+          Board.
         </h3>
       </header>
       <main className='max-w-2xl p-8 m-auto grid items-center gap-8 text-center'>
